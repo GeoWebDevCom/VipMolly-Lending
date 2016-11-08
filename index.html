@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+	<title>vipMolly</title>
+	<!-- SEO -->
+  	<meta name="author" content="">
+  	<meta name="description" content="">
+  	<meta name="keywords" content="">
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#69043b;}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	<!-- Header CSS (First Sections of Website: paste after release from _header.min.css here) -->
+	<style>.header,.paralax{background-repeat:no-repeat}.header{background-image:url(img/header-bg.jpg);background-position:50% 50%;height:820px;position:relative}.top-line{padding:20px 0;border-bottom:1px solid #737373}.menu-container{text-align:center;font-size:18px;text-transform:uppercase;padding-top:10px;position:relative}.menu-container .main-menu{z-index:9}.menu-container .main-menu li{display:inline-block}.menu-container .main-menu li a{padding:10px 15px}.menu-container .main-menu li a:focus,.menu-container .main-menu li a:hover{background-color:#bc3034;color:#fff}.main-title h4,.phone{color:#e7282d}.phone{font-family:Lato-Bold,sans-serif;font-size:26px;padding-top:5px;font-weight:700}.main-title h1,.main-title h4{font-family:Lato-Light,sans-serif}.paralax{position:absolute;top:0;left:0;width:100%;height:91.5%;background-image:url(img/paralax-bg.png);background-attachment:fixed}.main-title{padding-left:50%;padding-top:75px}.main-title h1{text-transform:uppercase;line-height:1;padding-bottom:40px}.main-title h4 strong{color:#fff;font-family:Lato-Bold,sans-serif}.arrow-down{position:absolute;bottom:70px;left:50%;margin-left:-11.5px}.toggle-menu{position:relative;z-index:999}</style>
+
+	<!-- Fonts Loader from _fonts.css (HTML5 LocalStorage) -->
+	<script>!function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="css/_fonts.min.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();</script>
+
+	<!-- Load CSS Compilled without JS -->
+	<noscript>  
+		<link rel="stylesheet" href="css/_main.min.css">
+		<link rel="stylesheet" href="css/_header.min.css">  
+	</noscript>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon/Vipmolly-favicon.ico" type="image/x-icon" sizes="16x16">
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="paralax"></div>
+		<div class="top-line">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10 col-sm-2 col-md-2 col-lg-2 logo wow rubberBand">
+						<a href="#"><img src="img/logo.png" alt=""></a>
+					</div>
+					<div class="col-xs-2 col-sm-4 col-sm-offset-2 col-md-4 col-lg-7 col-lg-offset-0 menu-container">
+						<a href="#" class="toggle-menu visible-xs visible-sm visible-md hidden-lg"><img src="img/menu.png" alt="img"></a>
+						<ul class="main-menu">
+							<li><a href="#section1" class="nav">приемущества</a></li>
+							<li><a href="#section2" class="nav">услуги</a></li>
+							<li><a href="#section4" class="nav">девушки</a></li>
+							<li><a href="#section5" class="nav">видео</a></li>
+							<li><a href="#section6" class="nav">отзывы</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 phone">
+						+ 38 067 823 97 77
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-title wow tada">
+			<div class="container">
+				<div class="row">
+					<h1>лучшее <br> эскорт <br> агенство</h1>
+					<h4> <strong>24 часа в сутки</strong> Molly работает для Вас!</h4>
+				</div>
+			</div>
+		</div>
+		<a href="#section1" class="arrow-down"><img src="img/mouse.png" alt="alt"></a>
+	</header>
+
+	<section class="section1" id="section1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 advantage-item wow fadeInLeft" data-wow-offset="200">
+					<a href="#">
+						<img src="img/advantage-item1.png" alt="1">
+						<p>Гарантия анонимности</p>
+					</a>
+				</div>
+				<div class="col-md-4 advantage-item wow fadeInUp" data-wow-offset="200">
+					<a href="#">
+						<img src="img/advantage-item2.png" alt="2">
+						<p>Выезд и апартаменты</p>
+					</a>
+				</div>
+				<div class="col-md-4 advantage-item wow fadeInRight" data-wow-offset="200">
+					<a href="#">
+						<img src="img/advantage-item3.png" alt="3">
+						<p>Высокий уровень сервиса</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section2 line" id="section2">
+		<div class="shadow-top"></div>
+		<div class="container">
+			<div class="row">
+				<h2 class="c-red">Услуги</h2>
+
+				<!-- start: services -->
+				<div class="col-md-12 services">
+
+					<!-- start: item -->
+					<div class="col-md-6 services-item wow fadeInLeft">
+						<div class="services-img-container">
+							<a href="#" class="services-img"><img src="img/service-img1.jpg" alt=""></a>
+							<div class="hidden-info">
+								<a href="#modal-1" class="open-modal"><img src="img/button.png" alt=""></a>
+							</div>
+						</div>
+						<div id="modal-1" class="modal-popup mfp-hide">
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+							<img src="img/modal-bg.jpg" alt="img">
+							<p>«Счастье не купишь, но можно купить лодку и попробовать подплыть к нему поближе», — гласит известная поговорка. А если это счастье — красиво, длинноного и неприступно, то что может быть лучше речной или морской прогулки. Свежий ветерок, прохлада и красивые пейзажи вокруг 
+								Пожалуй, самое необычное летнее свидание - это свидание на катере под звездами. Прогулка по водным просторам в освещении Луны и звезд, что может быть более чарующим и романтичным? Шампанское, тарелка фруктов, романтичная музыка и вы вдвоем средь водных просторов, в отражении мерцания звезд и городских огней! Прокатиться на катере вдоль сверкающей набережной, раствориться в спокойной безмятежности и наблюдать как оживает ночной город. Если будет прохладно, вас смогут согреть теплый плед и пара бокалов шампанского. Подарите незабываемый, полный романтики и неописуемой красоты вечер под звездами!
+							</p>
+							<img src="img/separator.jpg" alt="">
+						</div>
+						<h3><a href="#modal-1" class="open-modal">прогулка с девушкой на катере</a></h3>
+					</div>
+					<!-- end: item -->
+
+						<!-- start: item -->
+					<div class="col-md-6 services-item wow fadeInRight">
+						<div class="services-img-container">
+							<a href="#" class="services-img"><img src="img/service-img2.jpg" alt=""></a>
+							<div class="hidden-info">
+								<a href="#modal-2" class="open-modal"><img src="img/button.png" alt=""></a>
+							</div>
+						</div>
+						<div id="modal-2" class="modal-popup mfp-hide">
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+							<img src="img/modal2-bg.jpg" alt="img">
+							<p>Ужин в ресторане… Что может быть более волнительно, важно и приятно? Что заставляет нас и в 20, и 30, и 50 лет переживать, будто дети, будто мы идем на первое свидание в своей жизни? 
+								Не стесняйтесь пригласить девушку на ужин в ресторан. Здесь романтическая атмосфера создается из множества нюансов: блюда, обстановка, музыка, свет… Угостите ее изысканными блюдами средиземноморской или европейской кухни, закажите по бокалу вина и смотрите, как она будет счастлива. А если вы не хотите удивлять, выберите что-нибудь традиционное, но от этого не менее вкусное.
+								Заботы останутся позади, здесь будете только вы вдвоем… Живая музыка, приятная обстановка, немного вина – ничего не будет напоминать о шумных днях в мегаполисе, мелких проблемах и недоделанных делах. Уют, романтика, тепло …
+								Вы проведете незабываемый вечер в ресторане, разговаривая о своем и наслаждаясь временем в приятной компании. Вы отлично проведете время, а напоследок завершение ужина зависит только от вас самих.
+							</p>
+							<img src="img/separator.jpg" alt="">
+						</div>
+						<h3><a href="#modal-2" class="open-modal">поужинать с девушкой в ресторане</a></h3>
+					</div>
+					<!-- end: item -->
+
+						<!-- start: item -->
+					<div class="col-md-6 services-item wow fadeInLeft">
+						<div class="services-img-container">
+							<a href="#" class="services-img"><img src="img/service-img3.jpg" alt=""></a>
+							<div class="hidden-info">
+								<a href="#modal-3" class="open-modal"><img src="img/button.png" alt=""></a>
+							</div>
+						</div>
+						<div id="modal-3" class="modal-popup mfp-hide">
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+							<img src="img/modal3-bg.jpg" alt="img">
+							<p>Если ты устал и уже давно в жизни не хватает с каким-то очень приятным человечком женского пола залезть под одеялко, набрать всяких вкусностей, включить киношку валяться – обниматься весь вечер… Или ты давно уже хочешь сделать невероятно приятный массаж, который ты очень любишь делать, но вот сделать некому, потому что для этого просто нет нужного человека, а найти такого просто не хватает времени. 
+								Если тебе нужно просто поговорить, покурить кальян в приятной компании шикарной красотки,  выпить бокальчик вина и расслабиться после тяжелого дня. Если тебе нужно просто немножко нежности, то стоит пригласить девушку к себе в гости. И неважно будет это продолжение вашего вечера после ресторана или прогулки или же это будет ужин дома. Ведь благоприятные возможности существуют тогда, когда в них узнают благоприятные возможности. И такую возможность нельзя упускать. Просто приглашай нежное создание или игривую кошечку к себе и незабываемый вечер тебе гарантирован.
+
+							</p>
+							<img src="img/separator.jpg" alt="">
+						</div>
+						<h3><a href="#modal-3" class="open-modal">пригласить девушку к себе в гости</a></h3>
+					</div>
+					<!-- end: item -->
+
+						<!-- start: item -->
+					<div class="col-md-6 services-item wow fadeInRight">
+						<div class="services-img-container">
+							<a href="#" class="services-img"><img src="img/service-img4.jpg" alt=""></a>
+							<div class="hidden-info">
+								<a href="#modal-4" class="open-modal"><img src="img/button.png" alt=""></a>
+							</div>
+						</div>
+						<div id="modal-4" class="modal-popup mfp-hide">
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+							<img src="img/modal4-bg.jpg" alt="img">
+							<p>Пора вырваться из объятий своей квартиры или тесного офиса, отвлечься от работы и всех проблем, сменить немного обстановку и убежать от ритма мегаполиса. Скорее принимай приглашение красотки заглянуть к ней на вкусный ужин или чашечку чая со сладостями. Приятная беседа, новая атмосфера, обворожительная хозяйка не дадут тебе загрустить и полностью расслабят. 
+								Именно с загадочной незнакомкой можно поговорить обо всём, поделиться всеми тайнами и сокровенными желаниями. Женщина-загадка – вот мечта любого мужчины. Ведь так приятно разгадывать загадки и открывать что-то новое в себе и другом человеке. Каждая встреча как новая и в тоже время все интересней и интересней. Это как наркотик от которого потом не сможешь оторваться. Так что может стоит заглянуть на огонёк?
+
+							</p>
+							<img src="img/separator.jpg" alt="">
+						</div>
+						<h3><a href="#modal-2" class="open-modal">приехать к девушке в гости</a></h3>
+					</div>
+					<!-- end: item -->
+
+				</div>
+				<!-- end: services -->
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section3">
+		<div class="container">
+			<div class="row">
+				<div class="ol-md-10 col-md-offset-2 text-container">
+					<p>Наши девушки воспитаны, с высшим образованием, хорошо танцуют стрип пластику, отлично делают релакс массаж всего тела</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section4 line" id="section4">
+		<div class="shadow-top"></div>
+		<div class="container">
+			<div class="row">
+				<h2 class="c-red">Девушки</h2>
+
+				<!-- start: gallery -->
+				<div class="col-md-12 gallery">
+					<div class="row">
+						
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0s">
+							<div class="gallery-icon">
+								<a href="img/girls/alina.jpg" title="Алина">
+									<img src="img/girls/alina.jpg" alt="img">
+									<span class="gallery-caption">Алина</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.2s">
+							<div class="gallery-icon">
+								<a href="img/girls/anna.jpg" title="Анна">
+									<img src="img/girls/anna.jpg" alt="img">
+									<span class="gallery-caption">Анна</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.4s">
+							<div class="gallery-icon">
+								<a href="img/girls/vika.jpg" title="Вика">
+									<img src="img/girls/vika.jpg" alt="img">
+									<span class="gallery-caption">Вика</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.6s">
+							<div class="gallery-icon">
+								<a href="img/girls/eva.jpg" title="Ева">
+									<img src="img/girls/eva.jpg" alt="img">
+									<span class="gallery-caption">Ева</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0s">
+							<div class="gallery-icon">
+								<a href="img/girls/inna.jpg" title="Инна">
+									<img src="img/girls/inna.jpg" alt="img">
+									<span class="gallery-caption">Инна</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-dJPGy="0.2s">
+							<div class="gallery-icon">
+								<a href="img/girls/kamila.jpg" title="Камила">
+									<img src="img/girls/kamila.jpg" alt="img">
+									<span class="gallery-caption">Камила</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.6s">
+							<div class="gallery-icon">
+								<a href="img/girls/kris.jpeg" title="Кристи">
+									<img src="img/girls/kris.jpeg" alt="img">
+									<span class="gallery-caption">Кристи</span>
+								</a>
+							</div>
+						</div>
+
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.4s">
+							<div class="gallery-icon">
+								<a href="img/girls/liza.jpg" title="Лиза">
+									<img src="img/girls/liza.jpg" alt="img">
+									<span class="gallery-caption">Лиза</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.2s">
+							<div class="gallery-icon">
+								<a href="img/girls/margo.jpg" title="Марго">
+									<img src="img/girls/margo.jpg" alt="img">
+									<span class="gallery-caption">Марго</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.4s">
+							<div class="gallery-icon">
+								<a href="img/girls/masha.jpg" title="Маша">
+									<img src="img/girls/masha.jpg" alt="img">
+									<span class="gallery-caption">Маша</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.6s">
+							<div class="gallery-icon">
+								<a href="img/girls/milana.jpg" title="Милана">
+									<img src="img/girls/milana.jpg" alt="img">
+									<span class="gallery-caption">Милана</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0s">
+							<div class="gallery-icon">
+								<a href="img/girls/nastia.jpg" title="Настя">
+									<img src="img/girls/nastia.jpg" alt="img">
+									<span class="gallery-caption">Настя</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.2s">
+							<div class="gallery-icon">
+								<a href="img/girls/sofia.jpg" title="София">
+									<img src="img/girls/sofia.jpg" alt="img">
+									<span class="gallery-caption">София</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.6s">
+							<div class="gallery-icon">
+								<a href="img/girls/stella.jpg" title="Стелла">
+									<img src="img/girls/stella.jpg" alt="img">
+									<span class="gallery-caption">Стелла</span>
+						</a>
+							</div>
+						</div>
+
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.4s">
+							<div class="gallery-icon">
+								<a href="img/girls/yana.jpg" title="Яна">
+									<img src="img/girls/yana.jpg" alt="img">
+									<span class="gallery-caption">Яна</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 wow zoomIn" data-wow-delay="0.4s">
+							<div class="gallery-icon">
+								<a href="img/girls/polina.jpg" title="Полина">
+									<img src="img/girls/polina.jpg" alt="img">
+									<span class="gallery-caption">Полина</span>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- end: gallery -->
+
+				<div class="col-md-12">
+					<a href="#" class="main-button">хочешь увидеть больше девушек звони ! библиотека фото из 165 девушек</a>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section5 line" id="section5">
+		<div class="container">
+			<div class="row">
+				<h2>видео</h2>
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 wow zoomIn">
+					<div class="owl-carousel video-carousel">
+						<div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=s4GtYUIjPzY&feature=youtu.be"></a></div>
+						<div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=ImPlepBcyrU&feature=youtu.be"></a></div>
+						<div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=c2b08-Dnznc&feature=youtu.be"></a></div>
+					</div>
+				</div>
+				<map name="asd"></map>
+			</div>
+		</div>
+	</section>
+
+	<section class="section6 line" id="section6">
+		<div class="container">
+			<div class="row">
+				<h2> отзывы клиентов</h2>
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 wow zoomIn">
+					<div class="owl-carousel comments-carousel">
+						<div class="item">
+							<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 img-container">
+								<img src="img/author-comment.jpg" alt="alt">
+							</div>
+							<div class="col-xs-12 col-md-9">
+								<p class="author-name">Максим</p>
+								<p>Недавно провел время в компании очаровательной девушки Валерии. Все было на высшем уровне. Приятная собеседница, воспитання, обходительная, веселая, открытая и просто прекрасная девушка. Вечер в ее компании я не забуду еще очень долго.</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 img-container">
+								<img src="img/author-comment2.jpg" alt="alt">
+							</div>
+							<div class="col-xs-12 col-md-9">
+								<p class="author-name">Антон</p>
+								<p>Я долго искал настоящее эскорт агентство без обмана, развода на деньги или подставных фото и я его нашел. Девушка с которой отдыхал поразила своей красотой и умом. Я был приятно удивлен как она ведет себя в обществе и в компании незнакомых людей.</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 img-container">
+								<img src="img/author-comment3.jpg" alt="alt">
+							</div>
+							<div class="col-xs-12 col-md-9">
+								<p class="author-name">Андрей</p>
+								<p>Я с большим удовольствием буду обращаться сюда снова и снова. Высшее качество обслужевания, индивидуальный подход к каждому клиенту и всегда хорошее настроение. Цены выше средних, но оно того стоит. Так что кто ищет качественное времяпровождение, то нет лучше этого агенства.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section7">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<img src="img/heart.png" class="wow rubberBand">
+					<p>Агенство <strong>VipMolly</strong> не ориентировано на предоставление услуг интимного характера</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<img src="img/phone.png" alt="" class="wow rubberBand">
+				<p class="phone">+ 38 067 823 97 77</p>
+				<ul class="social">
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+					</ul>
+					<a href="#header" class="arrow-top"><img src="img/arrow-top.png" alt=""></a>
+			</div>
+		</div>
+	</footer>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+
+	<!-- Load CSS -->
+		<!--WoW.js  Animation-->
+	<script type="text/javascript" src="libs/wow/wow.min.js"></script>
+
+	<script>
+
+
+
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="libs/font-awesome-4.6.1/css/font-awesome.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+	
+	//User Styles + Media Queries
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="css/_main.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	</script>
+
+	<!-- Wow.js Animation -->
+	<script>
+		new WOW().init();
+	</script>
+
+	<!-- Load Scripts -->
+	<script>
+		var scr = {"scripts":[
+		{"src" : "libs/modernizr/modernizr.js", "async" : false},
+		{"src" : "libs/jquery/jquery-1.11.2.min.js", "async" : false},
+		{"src" : "libs/animate/animate-css.js", "async" : false},
+		{"src" : "libs/PageScroll2id/PageScroll2id.min.js", "async" : false},
+		{"src" : "libs/owl-carousel/owl.carousel.min.js", "async" : false},
+		{"src" : "libs/Magnific-popup/jquery.magnific-popup.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};
+		!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+</body>
+</html>
